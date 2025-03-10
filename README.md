@@ -2,7 +2,6 @@
 
 Spxcepower is a techno festival project I created for an event that took place on **November 28**. The festival reimagines childhood cartoon songs into **dark techno remixes**, blending nostalgia with an electrifying rave experience.  
 
-![Spxcepower Festival](./assets/spacepower.PNG)  
 
 ## 🌟 About the Project  
 This website was built to promote the **Spxcepower festival**, founded by **Tobi & Blurry Vision**. It serves as an online hub for event details, artist lineups, and the unique music concept behind the festival.  
