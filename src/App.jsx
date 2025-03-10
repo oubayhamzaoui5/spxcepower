@@ -26,7 +26,7 @@ function App() {
     <div>
       {isLoading && (
         <div className={styles.loadingContainer}>
-          <img src="/assets/image00003.png" alt="Loading" className={styles.loadingImage} />
+          <img src={import.meta.env.BASE_URL + "/assets/image00003.png"} alt="Loading" className={styles.loadingImage} />
         </div>
       )}
       {/* Render the main content even while loading */}

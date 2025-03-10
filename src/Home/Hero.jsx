@@ -51,7 +51,7 @@ function Hero() {
     
       <div className={styles.background}>
         <img
-          src="src/assets/image00001.jpeg"
+          src={import.meta.env.BASE_URL + "/assets/image00001.jpeg"}
           alt="Background 1"
           className={styles.backgroundImage1}
         />
