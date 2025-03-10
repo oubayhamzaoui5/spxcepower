@@ -1,0 +1,36 @@
+.loadingContainer {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Dark background for the loading screen */
+  }
+  .hidden {
+    display: none; /* Hide the main content while loading */
+  }
+  
+  .visible {
+    display: block; /* Show the main content after loading */
+    opacity: 1; /* Ensure it is fully visible when shown */
+    transition: opacity 0.5s ease-in; /* Optional transition for smooth appearance */
+  }
+  
+  .loadingImage {
+    position: relative;
+ 
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

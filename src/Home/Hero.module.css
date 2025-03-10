@@ -1,0 +1,199 @@
+.heroContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Background stays behind */
+}
+
+.backgroundImage1,
+.backgroundImage2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+
+  top: 0;
+  object-fit: cover;
+}
+
+.backgroundImage1 {
+  left: 0;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 95%
+  );
+}
+
+.backgroundImage2 {
+  right: 0;
+  transform: scaleX(-1); /* Flip the second image horizontally */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 95%
+  );
+}
+
+.logoContainer {
+  z-index: 1; /* Keeps the logo and text on top of the background */
+  text-align: center;
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 2.7rem;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: white;
+  font-family: "demon", "Courier", monospace;
+  text-shadow: 
+  -2px -2px 0 black,   /* Top-left shadow */
+  2px -2px 0 black,    /* Top-right shadow */
+  -2px 2px 0 black,    /* Bottom-left shadow */
+  2px 2px 0 black;     /* Bottom-right shadow */
+
+}
+.text {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 
+  -1px -1px 0 black,   /* Top-left shadow */
+  1px -1px 0 black,    /* Top-right shadow */
+  -1px 1px 0 black,    /* Bottom-left shadow */
+  1px 1px 0 black;     /* Bottom-right shadow */
+}
+
+.countdown p {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "timef", "Courier", monospace;
+  text-shadow: 
+  -2px -2px 0 black,   /* Top-left shadow */
+  2px -2px 0 black,    /* Top-right shadow */
+  -2px 2px 0 black,    /* Bottom-left shadow */
+  2px 2px 0 black;     /* Bottom-right shadow */
+}
+
+.soundcloudButton {
+  width: fit-content;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+ 
+}
+.soundcloudButton a{
+ 
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease,
+  border-color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid white; /* Add a solid white border */
+  padding: 12px 24px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+
+.soundcloudButton a:hover{
+  background-color: white;
+}
+.soundcloudButton a:hover{
+  color: black;
+}
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+
+  .soundcloudButton{
+  left: 50%;
+  transform: translateX(-50%);
+  }
+
+  .logo {
+    width: 450px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .countdown p {
+    font-size: 2.3rem;
+  }
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 768px) {
+
+
+  .logo {
+    width: 350px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .countdown p {
+    font-size: 1.8rem;
+  }
+
+  .soundcloudButton {
+    padding: 8px 16px;
+  }
+  .soundcloudButton a{
+    font-size: 1rem;
+  }
+}
+
+/* Very small screens (narrow devices) */
+@media (max-width: 480px) {
+  .logo {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+
+  .countdown p {
+    font-size: 1.5rem;
+  }
+
+  .soundcloudButton {
+    padding: 6px 12px;
+  }
+  .soundcloudButton a{
+    font-size: 0.8rem;
+  }
+}

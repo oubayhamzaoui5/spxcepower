@@ -1,0 +1,202 @@
+.footerContainer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #020202;
+  color: white;
+  padding: 20px;
+  position: relative;
+  position: relative;
+  overflow: clip;
+}
+
+.socialsAndCountdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.col {
+  display: flex; /* Keep this */
+  flex-direction: row; /* Ensure this is set to row */
+  align-items: center; /* This will align items vertically centered */
+}
+
+
+.socials a {
+  display: flex; /* Make sure the link itself is a flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: center;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Ensure text color is set */
+  font-size: 1.4em;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #950507; /* Change color on hover */
+}
+
+.countdown {
+  margin-bottom: 8px;
+  font-size: 2.5rem;
+  font-family: "timef", "Courier", monospace;
+
+}
+
+.logoContainer {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.icon{
+  margin-right: 8px;
+}
+.backone{
+  height: 200%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: invert(0.6);
+
+}
+.backone img{
+  height: 100%;
+  width: auto;
+}
+.backtwo{
+  height: 200%;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  filter: invert(0.6);
+}
+.backtwo img{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: auto;
+}
+/* Large screens (Desktops) */
+@media (min-width: 1024px) {
+  .footerContainer {
+    height: 70vh; /* Adjust height */
+    align-items: center;
+    padding: 40px;
+  }
+
+  .socialsAndCountdown {
+    gap: 20px; /* Add spacing between columns */
+  }
+ 
+
+  .socials a {
+    font-size: 1.6em;
+  }
+
+  .countdown {
+    font-size: 3rem; /* Increase size for large screens */
+  }
+
+  .logo {
+    width: 250px;
+  }
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .footerContainer {
+    height: 50vh;
+    padding: 30px;
+  }
+
+  .socials a {
+    font-size: 1.5em;
+  }
+
+  .countdown {
+    font-size: 1.7rem;
+  }
+
+  .logo {
+    width: 220px;
+  }
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 768px) {
+  .footerContainer {
+    height: 50vh;
+    padding: 20px;
+  }
+
+  .socials {
+    gap: 20px;
+  }
+
+  .socials a {
+    font-size: 1.3em;
+  }
+
+  .countdown {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+
+/* Very small screens (narrow devices) */
+@media (max-width: 480px) {
+  .footerContainer {
+    height: 50vh;
+    padding: 20px;
+  }
+
+  .socials a {
+    font-size: 1.2em;
+  }
+
+  .countdown {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+}

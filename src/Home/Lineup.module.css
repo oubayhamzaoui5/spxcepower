@@ -1,0 +1,177 @@
+.container {
+    height: 220vh;
+    margin-top: -100vh;
+    position: relative;
+}
+
+.content {
+    position: sticky;
+    top: 0; /* Stick to the top of the page */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+    z-index: -1; /* Background stays behind */
+  }
+  
+  .backgroundImage1, .backgroundImage2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    top: 0;
+    object-fit: cover;
+    
+  }
+  
+  .backgroundImage1 {
+    left: 0;
+
+    
+  }
+
+  .backgroundImage2 {
+    right: 0;
+    transform: scaleX(-1); /* Flip the second image horizontally */
+
+  }
+
+  
+
+  
+  .profile {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 30vh;
+    background-color: rgba(126, 126, 126, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(2px); /* Apply the blur effect */
+  }
+  
+  .profileImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    position: relative;
+
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .artistName {
+    margin-top: -40px;
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    font-family: "demon", "Courier", monospace;
+    text-shadow: 
+      -2px -2px 0 black,   /* Top-left shadow */
+      2px -2px 0 black,    /* Top-right shadow */
+      -2px 2px 0 black,    /* Bottom-left shadow */
+      2px 2px 0 black;     /* Bottom-right shadow */
+  }
+  
+  
+  
+  .music {
+    width: 65%;
+    height: 100%;
+    overflow: clip;
+    background-color: #4C4C4C;
+    display: flex;
+    align-items: end;
+    position: relative;
+    z-index: 0;
+
+  }
+  
+  .music iframe {
+    width: 100%;
+    height: 80%;
+    position: relative;
+
+    z-index: 1;
+  }
+  .grid {
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two profiles per row */
+    grid-gap: 12px; /* Space between grid items */
+    grid-column-gap: 12px;
+    width: fit-content;
+    box-sizing: border-box;
+}
+/* Large screens (Desktops) */
+@media (min-width: 1024px) {
+
+
+  .artistName {
+    font-size: 1.6em;
+  }
+
+
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .profile{
+    width: 100%;
+    height: 20vh;
+  }
+  .container {
+    height: fit-content;
+    margin-top: 0vh;
+   
+  }
+  .grid{
+    grid-template-columns: repeat(1, 1fr); /* Two profiles per row */
+
+  }
+  .content {
+    padding: 20px 0;
+    height: fit-content; /* Full viewport height */
+ 
+}
+  .artistName {
+    font-size: 1.4em;
+  }
+
+ 
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 768px) {
+
+
+  .artistName {
+    font-size: 1.2em;
+  }
+
+
+}
+
+/* Very small screens (narrow devices) */
+@media (max-width: 480px) {
+
+
+  .artistName {
+    font-size: 1em;
+  }
+
+
+}

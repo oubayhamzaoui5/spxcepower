@@ -1,0 +1,231 @@
+.container{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: clip;
+    padding: 20px;
+    position: relative;
+}
+.desc{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.places{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desc h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-family: "demon", "Courier", monospace;
+
+}
+.desc h2{
+    font-size: 1em;
+    font-weight: 100;
+    margin-bottom: 0px;
+
+}
+.desc h3{
+    font-size: 1.6em;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+.imgcontainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.imgcontainer img{
+    width: 100%;
+    height: auto;
+    filter: invert(0.5);
+    transform: translateY(40px);
+}
+.back{
+    position: absolute; /* Absolutely position the background */
+    top: 0;
+    right: 20px;
+    width: 50%;
+    height: 50%;
+    z-index: -1; /* Place the background behind other content */
+    display: flex;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+  
+}
+.back img {
+
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    pointer-events: none; /* Prevent interaction */
+  }
+  .contact {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactLink {
+    margin-top: 12px;
+
+    background-color: transparent;
+    border: 2px solid white; /* Add a solid white border */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .contactLink:hover {
+    background-color: white;
+    color: black;
+  }
+  /* Large screens (Desktops) */
+@media (min-width: 1024px) {
+    .container {
+      padding: 40px;
+    }
+  
+    .desc {
+      width: 50%;
+    }
+  
+    .imgcontainer {
+      width: 50%;
+    }
+  
+    .desc h1 {
+      font-size: 2.1em;
+    }
+  
+    .desc h2, .desc h3 {
+      font-size: 1.6em;
+    }
+  
+    .contactLink {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Medium screens (Tablets) */
+  @media (max-width: 1024px) {
+    
+    .container {
+      flex-direction: column;
+      padding: 30px;
+      height: 60vh;
+
+    }
+    .back{
+      left: 50%;
+      top: 50%;
+
+      transform: translateX(-50%) translateY(-50%);
+    
+      width: 80%;
+      height: 80%;
+      overflow: visible;
+    }
+    .back img {
+      height: 100%;
+      width: auto;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translateX(-50%) translateY(-50%);
+    }
+  
+    .desc {
+      width: 80%;
+    }
+  
+    .imgcontainer {
+      display: none;
+    }
+  
+    .desc h1 {
+      font-size: 2em;
+    }
+  
+    .desc h2, .desc h3 {
+      font-size: 1.4em;
+    }
+  
+    .contactLink {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Small screens (Mobile devices) */
+  @media (max-width: 768px) {
+
+    .container {
+      padding: 20px;
+      flex-direction: column;
+    }
+  
+    .desc {
+      width: 100%;
+      text-align: center;
+    }
+  
+  
+  
+    .desc h1 {
+      font-size: 1.8em;
+    }
+  
+    .desc h2, .desc h3 {
+      font-size: 1.2em;
+    }
+  
+    .contactLink {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Very small screens (narrow devices) */
+  @media (max-width: 480px) {
+    .desc {
+      width: 100%;
+      text-align: center;
+    }
+  
+  
+  
+    .desc h1 {
+      font-size: 1.5em;
+    }
+  
+    .desc h2, .desc h3 {
+      font-size: 1em;
+    }
+  
+    .contactLink {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,207 @@
+.musicContainer {
+    margin-top: 40px;
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding: 10vh 0;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Background stays behind */
+  }
+  
+  .backgroundImage1,
+  .backgroundImage2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  
+    top: 0;
+    object-fit: cover;
+  }
+  
+  .backgroundImage1 {
+    left: 0;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  
+  .backgroundImage2 {
+    right: 0;
+    transform: scaleX(-1); /* Flip the second image horizontally */
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  
+  .header {
+    background-color: black; /* Black header background */
+    color: white; /* Text color */
+    height: 260px; /* Header takes half the viewport */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .headerContent {
+    display: flex;
+    width: 100%; /* Limit the width of the content */
+  }
+  
+  .logo {
+    width: 200px; /* Adjust the size of the circular image */
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 20px; /* Space between the image and text */
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+  
+  .text p {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #CCCCCC;
+  }
+  
+  .content {
+    height:100vh; /* Remaining half of the viewport */
+    width: calc(80% + 40px);
+    padding: 0 0;
+    background-color: rgb(255, 255, 255,0.2);
+    border-radius: 0 0 12px 12px;
+    overflow: clip;
+
+    /* Empty for now */
+  }
+  /* Large screens (Desktops) */
+@media (min-width: 1024px) {
+  .header {
+    width: 80%;
+    height: 260px;
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  .text h1 {
+    font-size: 2em;
+  }
+
+  .text p {
+    font-size: 1.2em;
+  }
+
+  .content {
+    width: calc(80% + 40px);
+    height: 100vh;
+  }
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .header {
+    width: 100%;
+    height: 220px;
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+  }
+
+  .text h1 {
+    font-size: 1.8em;
+  }
+
+  .text p {
+    font-size: 1.1em;
+  }
+
+ 
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 768px) {
+  .header {
+    width: 95%;
+    height: 200px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 0 15px 0; /* Margin below logo for mobile layout */
+  }
+
+  .text h1 {
+    font-size: 1.5em;
+  }
+
+  .text p {
+    font-size: 1em;
+  }
+
+
+}
+
+/* Very small screens (narrow devices) */
+@media (max-width: 480px) {
+  .header {
+    width: 100%;
+    height: 180px;
+  }
+  .content{
+    width: 100%;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text h1 {
+    font-size: 1.3em;
+  }
+
+  .text p {
+    font-size: 0.9em;
+  }
+
+ 
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "texture";
+  src: url("src/assets/fonts/NightmarePills-BV2w.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "timef";
+  src: url("src/assets/fonts/histeria.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "demon";
+  src: url("src/assets/fonts/Demoness.otf") format("opentype"); /* Correct format for OTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("./assets/pat.webp");
+  background-repeat: repeat; /* Repeat the pattern both horizontally and vertically */
+  background-size: 200px 200px; /* Size of each pattern tile */
+  background-color: #020202;
+  font-family: "texture", "Courier", monospace; /* Fallback fonts if timef doesn't load */
+}
+
