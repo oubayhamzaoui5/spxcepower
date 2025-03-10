@@ -41,15 +41,21 @@ function Footer() {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.backone}>
-        <img src="src\assets\112-design-syndrome-necronomicon-.png" alt="" />
+        <img
+          src={import.meta.env.BASE_URL + "/assets/112-design-syndrome-necronomicon-.png"}
+          alt=""
+        />
       </div>
       <div className={styles.backtwo}>
-        <img src="src\assets\112-design-syndrome-necronomicon-.png" alt="" />
+        <img
+          src={import.meta.env.BASE_URL + "/assets/112-design-syndrome-necronomicon-.png"}
+          alt=""
+        />
       </div>
       <div>
         <div className={styles.logoContainer}>
           <img
-            src="src/assets/image00003.png"
+            src={import.meta.env.BASE_URL + "/assets/image00003.png"}
             alt="Logo"
             className={styles.logo}
           />
@@ -81,18 +87,17 @@ function Footer() {
               </a>
             </div>
           </div>
-       
         </div>
       </div>
 
       <div className={styles.copyright}>
-      <div className={styles.countdown}>
+        <div className={styles.countdown}>
           <p>
             {timeLeft.days} Days &nbsp; {String(timeLeft.hours).padStart(2, "0")}&nbsp;:&nbsp;
             {String(timeLeft.minutes).padStart(2, "0")}&nbsp;:&nbsp;
             {String(timeLeft.seconds).padStart(2, "0")}
           </p>
-          </div>
+        </div>
         <p>© 2024 Spxacepower. All rights reserved.</p>
       </div>
     </div>

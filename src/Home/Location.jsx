@@ -7,9 +7,12 @@ function Location(){
     <div className={styles.locationContainer}>
      
       <div className={styles.locationInfo}>
-      <div className={styles.back}>
-        <img src="src\assets\BEAST-24--ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png" alt="" />
-      </div>
+        <div className={styles.back}>
+          <img
+            src={import.meta.env.BASE_URL + "/assets/BEAST-24--ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png"}
+            alt=""
+          />
+        </div>
         <h2>INFORMATIONS</h2>
         <h4>
           <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} /> LOCATION
@@ -19,17 +22,19 @@ function Location(){
         <h4>
           <FontAwesomeIcon icon={faCalendarAlt} className={styles.icon} /> DATE & TIME
         </h4>
-        <p>November  <span
+        <p>November <span
               style={{ fontFamily: "Impact, sans-serif" }}
             >
-              28, 2024 - 9 
+              28, 2024 - 9
             </span>{" "}PM</p>
         
         <button className={styles.moreInfoButton}>MAP</button>
       </div>
       <div className={styles.locationImage}>
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPh6i6TI-8kgYOxpRXxCrySOKdwZ6a6PbrK43OM=s1360-w1360-h1020" alt="BSMNT THE CLUB" />
-       
+        <img
+          src="https://lh3.googleusercontent.com/p/AF1QipPh6i6TI-8kgYOxpRXxCrySOKdwZ6a6PbrK43OM=s1360-w1360-h1020"
+          alt="BSMNT THE CLUB"
+        />
       </div>
     </div>
   );

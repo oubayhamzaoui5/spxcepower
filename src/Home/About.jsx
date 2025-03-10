@@ -5,18 +5,28 @@ function About() {
     <>
       <div className={styles.container}>
         <div className={styles.backgroundcontainer}>
-          <img src="src/assets/skeletons2--ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png" alt="Background" />
+          <img 
+            src={import.meta.env.BASE_URL + "/assets/skeletons2--ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png"} 
+            alt="Background" 
+          />
         </div>
 
         <div className={styles.imgc}>
           {/* Background video */}
           <video className={styles.videoBg} autoPlay muted loop>
-            <source src="src/assets/about.mp4" type="video/mp4" />
+            <source 
+              src={import.meta.env.BASE_URL + "/assets/about.mp4"} 
+              type="video/mp4" 
+            />
             Your browser does not support the video tag.
           </video>
 
           {/* Logo image in front of the video */}
-          <img src="src/assets/image00003.png" alt="Logo" className={styles.logo} />
+          <img 
+            src={import.meta.env.BASE_URL + "/assets/image00003.png"} 
+            alt="Logo" 
+            className={styles.logo} 
+          />
         </div>
 
         <div className={styles.desc}>

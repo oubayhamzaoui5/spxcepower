@@ -39,16 +39,16 @@ function Hero() {
 
   return (
     <div className={styles.heroContainer}>
-      <div  className={styles.soundcloudButton}>
-       <a
-        href="https://soundcloud.com/your-soundcloud-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Listen on SoundCloud
-      </a>
+      <div className={styles.soundcloudButton}>
+        <a
+          href="https://soundcloud.com/your-soundcloud-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Listen on SoundCloud
+        </a>
       </div>
-    
+
       <div className={styles.background}>
         <img
           src={import.meta.env.BASE_URL + "/assets/image00001.jpeg"}
@@ -56,16 +56,14 @@ function Hero() {
           className={styles.backgroundImage1}
         />
         <img
-          src="src/assets/image00001.jpeg"
+          src={import.meta.env.BASE_URL + "/assets/image00001.jpeg"}
           alt="Background 2"
           className={styles.backgroundImage2}
         />
       </div>
       <div className={styles.logoContainer}>
-     
-
         <img
-          src="src/assets/image00003.png"
+          src={import.meta.env.BASE_URL + "/assets/image00003.png"}
           alt="Logo"
           className={styles.logo}
         />

@@ -1,18 +1,19 @@
 import styles from "./Tickets.module.css";
+
 function Tickets() {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.imgcontainer}>
           <img
-            src="src\assets\were-wolf-25-designsyndrome-necronomicon.png"
+            src={import.meta.env.BASE_URL + "/assets/were-wolf-25-designsyndrome-necronomicon.png"}
             alt=""
             className={styles.first}
           />
         </div>
         <div className={styles.back}>
           <img
-            src="src\assets\SYMBOLS 35 - ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png"
+            src={import.meta.env.BASE_URL + "/assets/SYMBOLS 35 - ENGRAVING-DESIGN-SYNDROME-NECRONOMICON-.png"}
             alt=""
           />
         </div>
@@ -54,4 +55,5 @@ function Tickets() {
     </>
   );
 }
+
 export default Tickets;

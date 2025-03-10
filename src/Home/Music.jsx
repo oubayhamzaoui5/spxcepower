@@ -3,14 +3,14 @@ import styles from "./Music.module.css";
 function Music() {
   return (
     <div className={styles.musicContainer}>
-        <div className={styles.background}>
+      <div className={styles.background}>
         <img
-          src="src/assets/image00001.jpeg"
+          src={import.meta.env.BASE_URL + "/assets/image00001.jpeg"}
           alt="Background 1"
           className={styles.backgroundImage1}
         />
         <img
-          src="src/assets/image00001.jpeg"
+          src={import.meta.env.BASE_URL + "/assets/image00001.jpeg"}
           alt="Background 2"
           className={styles.backgroundImage2}
         />
@@ -19,7 +19,7 @@ function Music() {
         <div className={styles.headerContent}>
           {/* Circular image */}
           <img
-            src="src\assets\image00005.jpeg" /* Replace with your actual image */
+            src={import.meta.env.BASE_URL + "/assets/image00005.jpeg"} // Replace with your actual image
             alt="Spxcepower"
             className={styles.logo}
           />
